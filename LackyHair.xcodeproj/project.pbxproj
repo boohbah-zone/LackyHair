@@ -21,6 +21,7 @@
 		6CFAF115188282FB0018CBE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFAF0F7188282FB0018CBE3 /* UIKit.framework */; };
 		6CFAF11D188282FB0018CBE3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6CFAF11B188282FB0018CBE3 /* InfoPlist.strings */; };
 		6CFAF11F188282FB0018CBE3 /* LackyHairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF11E188282FB0018CBE3 /* LackyHairTests.m */; };
+		6CFAF12A188283330018CBE3 /* HairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFAF129188283330018CBE3 /* HairView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		6CFAF11A188282FB0018CBE3 /* LackyHairTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LackyHairTests-Info.plist"; sourceTree = "<group>"; };
 		6CFAF11C188282FB0018CBE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6CFAF11E188282FB0018CBE3 /* LackyHairTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LackyHairTests.m; sourceTree = "<group>"; };
+		6CFAF128188283330018CBE3 /* HairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HairView.h; sourceTree = "<group>"; };
+		6CFAF129188283330018CBE3 /* HairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HairView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				6CFAF109188282FB0018CBE3 /* ViewController.m */,
 				6CFAF10B188282FB0018CBE3 /* Images.xcassets */,
 				6CFAF0FA188282FB0018CBE3 /* Supporting Files */,
+				6CFAF128188283330018CBE3 /* HairView.h */,
+				6CFAF129188283330018CBE3 /* HairView.m */,
 			);
 			path = LackyHair;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFAF12A188283330018CBE3 /* HairView.m in Sources */,
 				6CFAF10A188282FB0018CBE3 /* ViewController.m in Sources */,
 				6CFAF104188282FB0018CBE3 /* AppDelegate.m in Sources */,
 				6CFAF100188282FB0018CBE3 /* main.m in Sources */,
