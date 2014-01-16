@@ -11,4 +11,6 @@
 @interface ViewController : UIViewController<UINavigationControllerDelegate ,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 -(IBAction)loadImage:(id)sender;
+- (IBAction)loadPhotoLibrary:(id)sender;
+
 @end

@@ -28,7 +28,7 @@
     if (sender.state == UIGestureRecognizerStateEnded)
     {
         CGPoint loc =  [sender locationInView:self.imageView];
-        CGRect frame = CGRectMake(loc.x - 10, loc.y, 20, 20);
+        CGRect frame = CGRectMake(loc.x - 10, loc.y, 100, 100);
         HairView* hair = [[HairView alloc]initWithFrame:frame];
         [self.imageView addSubview:hair];
     }
@@ -68,6 +68,16 @@
     {
     }
 
+
+}
+
+- (IBAction)loadPhotoLibrary:(id)sender {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
+    [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    [imagePickerController setAllowsEditing:YES];
+    [imagePickerController setDelegate:self];
+    
+    [self presentViewController:imagePickerController animated:YES completion:nil];
 
 }
 

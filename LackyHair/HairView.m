@@ -20,6 +20,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        
+
     }
     return self;
 }
@@ -41,7 +43,7 @@
     }
     
     
-    int points = 100;
+    int points = (80.0 + 20.0* sinf(_animationFrame*M_PI/360 * 2));
     CGContextRef c = UIGraphicsGetCurrentContext();
     
     CGContextSetFillColorWithColor(c, [UIColor clearColor].CGColor);
@@ -52,10 +54,14 @@
     
     float freq = 30;
     for (int i = 0; i < points; i++) {
-        float y = i;
-        float x = sinf(i*M_PI/360 * 6) * cosf((i + _animationFrame)*M_PI * freq / 360) * 5 + 10;
+        float mag = _animationFrame > 100? 1:_animationFrame * 0.01;
+        float y = i * mag ;
+
+//        float x = sinf(i*M_PI/360 * 6) * cosf((i + _animationFrame)*M_PI * freq / 360) * 5 * mag+ 10;
+        float x = sinf(((i + _animationFrame)*M_PI * freq / 360)*mag) * 5 *i * 0.02 * mag*mag+ 10;
+//        float x = sinf(i*M_PI/360 * 6 * mag * freq) * mag+ 10;
         
-        CGContextFillRect(c, CGRectMake(x, y, 1, 2));
+        CGContextFillRect(c, CGRectMake(x, y, 2, 5));
     }
     _animationFrame++;
 }
