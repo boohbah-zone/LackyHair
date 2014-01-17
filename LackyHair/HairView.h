@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HairView : UIView
-
+- (id)initWithFrame:(CGRect)frame mode:(BOOL)mode;
 @end

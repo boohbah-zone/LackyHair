@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController{
-    
+    BOOL _mode;
 }
 
 - (void)viewDidLoad
@@ -21,6 +21,7 @@
     [super viewDidLoad];
     UIGestureRecognizer* gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
     [self.view addGestureRecognizer:gesture];
+    _mode = YES;
 }
 
 -(void)tap:(UITapGestureRecognizer*)sender
@@ -28,8 +29,8 @@
     if (sender.state == UIGestureRecognizerStateEnded)
     {
         CGPoint loc =  [sender locationInView:self.imageView];
-        CGRect frame = CGRectMake(loc.x - 10, loc.y, 100, 100);
-        HairView* hair = [[HairView alloc]initWithFrame:frame];
+        CGRect frame = _mode ?CGRectMake(loc.x - 10, loc.y, 100, 100):CGRectMake(loc.x - 10, loc.y, 20, 20);
+        HairView* hair = [[HairView alloc]initWithFrame:frame mode:_mode];
         [self.imageView addSubview:hair];
     }
 }
@@ -81,6 +82,9 @@
 
 }
 
+- (IBAction)modeDidChange:(UISwitch*)sender {
+    _mode =  sender.on;
+}
 #pragma mark UINavigationControllerDelegate
 
 

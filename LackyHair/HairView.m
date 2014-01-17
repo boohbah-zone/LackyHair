@@ -13,13 +13,15 @@
 {
     NSUInteger _animationFrame;
     NSTimer* _timer;
+    BOOL _mode;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame mode:(BOOL)mode
 {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        _mode = mode;
         
 
     }
@@ -54,14 +56,19 @@
     
     float freq = 30;
     for (int i = 0; i < points; i++) {
-        float mag = _animationFrame > 100? 1:_animationFrame * 0.01;
-        float y = i * mag ;
 
-//        float x = sinf(i*M_PI/360 * 6) * cosf((i + _animationFrame)*M_PI * freq / 360) * 5 * mag+ 10;
-        float x = sinf(((i + _animationFrame)*M_PI * freq / 360)*mag) * 5 *i * 0.02 * mag*mag+ 10;
-//        float x = sinf(i*M_PI/360 * 6 * mag * freq) * mag+ 10;
+        if(_mode){
+            float mag = _animationFrame > 100? 1:_animationFrame * 0.01;
+            float y = i * mag ;
+            float x = sinf(((i + _animationFrame)*M_PI * freq / 360)*mag) * 5 *i * 0.02 * mag*mag+ 10;
+            CGContextFillRect(c, CGRectMake(x, y, 2, 5));
+            
+        }else{
+            float y = i;
+            float x = sinf(i*M_PI/360 * 6) * cosf((i + _animationFrame)*M_PI * freq / 360) * 5 + 10;
+            CGContextFillRect(c, CGRectMake(x, y, 1, 1));
+        }
         
-        CGContextFillRect(c, CGRectMake(x, y, 2, 5));
     }
     _animationFrame++;
 }

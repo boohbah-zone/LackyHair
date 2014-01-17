@@ -42,6 +42,13 @@
                                     <action selector="loadPhotoLibrary:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dao-J4-m5L"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19A-Hv-dJ3">
+                                <rect key="frame" x="136" y="501" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="modeDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vaw-Mf-ljC"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2CAE2F33-99B2-48E5-A293-1E1CCF77868A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LackyHair</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>67223AA2-45D2-4DAE-A51E-22EB9989903D</key>
+		<string>https://github.com/boohbah-zone/LackyHair.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LackyHair.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>67223AA2-45D2-4DAE-A51E-22EB9989903D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/boohbah-zone/LackyHair.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>67223AA2-45D2-4DAE-A51E-22EB9989903D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67223AA2-45D2-4DAE-A51E-22EB9989903D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LackyHair</string>
+		</dict>
+	</array>
+</dict>
+</plist>
